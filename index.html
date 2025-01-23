@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team Spirit</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jaro:opsz@6..72&display=swap');
+
+		body {
+			font-family: 'Jaro';
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			align-items: center;
+			text-align: center;
+		}
+
+		.navbar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px 20px;
+			margin: 0 auto;
+			background-color: #fff;
+			color: #000;
+			max-width: 1200px;
+			margin: auto;
+		}
+
+		.navbar-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			max-width: 1200px;
+		}
+
+		.navbar h1 {
+			margin-right: auto;
+			font-size: 32.06px;
+		}
+
+		.navbar h1 img {
+			height: 40px;
+			margin-right: 10px;
+		}
+
+		.navbar nav {
+			display: flex;
+			gap: 15px;
+		}
+
+		.navbar a {
+			color: #000;
+			text-decoration: none;
+			font-size: 24px;
+			margin: auto;
+		}
+
+		navbar a:hover {
+			text-decoration: underline;
+		}
+
+		.champions {
+			background-color: #EFEFEF;
+			padding: 20px;
+			margin: 20px auto;
+			border-radius: 10px;
+			max-width: 1440px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		.champions h2 {
+			font-size: 36px;
+		}
+
+		.champions p {
+			font-family: 'Inria Sans';
+			font-size: 24px;
+		}
+
+		.champions .btn {
+			display: inline-block;
+			background-color: #FF53EE;
+			color: #fff;
+			text-decoration: none;
+			padding: 24px 104.5px;
+			border-radius: 5px;
+			font-size: 17.97px;
+			margin-top: 10px;
+		}
+
+		.champions .btn:hover {
+			background-color: #e600e6;
+		}
+
+		.shop {
+			display: flex;
+			flex-wrap: wrap;
+			background-image: linear-gradient(#CBE4E9, #EEE1E1, #F5CDCD);
+			padding: 60px 20px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.shop-card {
+			width: 100%;
+			max-width: 600px;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.shop-black {
+			background-color: #18181A;
+			color: #ffffff;
+			text-align: left;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.shop-white {
+			background-color: #FFFFFF;
+			color: #000000;
+			text-align: left;
+			position: relative;
+		}
+
+		.shop-white img {
+			position: absolute;
+			top: 40px;
+			right: 10px;
+			width: 50px;
+			height: auto;
+		}
+
+		.shop-black .card a {
+			align-self: start;
+			margin-left: 0;
+			margin-top: 0px;
+		}
+
+		.card h2 {
+			font-size: 32px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
+		.card p {
+			font-family: 'Inria Sans', sans-serif;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 20px;
+			text-align: left;
+		}
+
+		.card a {
+			display: inline-block;
+			font-family: 'Inria Sans', sans-serif;
+			color: #FFFFFF;
+			background-color: #000000;
+			padding: 10px 20px;
+			border-radius: 6px;
+			font-size: 14px;
+			text-decoration: none;
+			align-self: flex-start;
+		}
+
+		.shop-collections {
+			text-align: left;
+			margin-top: 40px;
+			padding: 20px;
+		}
+
+		.shop-collections-title {
+			font-family: 'Jaro', sans-serif;
+			font-size: 36px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			color: #000;
+		}
+
+		.shop-collections-text {
+			font-family: 'Inria Sans', sans-serif;
+			font-size: 20px;
+			color: #000;
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+
+		.shop-collections-button {
+			display: inline-block;
+			font-family: 'Jaro';
+			font-size: 18px;
+			color: #fff;
+			background-color: #74745C;
+			padding: 15px 50px;
+			text-transform: uppercase;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.shop-collections-button:hover {
+			background-color: #333;
+		}
+
+		.roster {
+			background-color: #18181A;
+			color: #FFFFFF;
+			padding: 20px;
+			margin: 20px auto;
+			border-radius: 10px;
+			max-width: 1440px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		.roster h2 {
+			font-size: 36px;
+		}
+
+		.roster p {
+			font-family: 'Inria Sans';
+			font-size: 24px;
+			color: #ADB1B8;
+		}
+
+		.roster .btn {
+			display: inline-block;
+			background-color: #ffffff;
+			color: #000000;
+			text-decoration: none;
+			padding: 24px 104.5px;
+			border-radius: 5px;
+			font-size: 17.97px;
+			margin-top: 10px;
+		}
+
+		.roster .btn:hover {
+			background-color: #c4c3c4;
+		}
+
+		.footer {
+			font-family: 'Inria Sans';
+			background-image: linear-gradient(#CBE4E9, #EEE1E1, #F5CDCD);
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<header class="navbar">
+		<h1>
+			<img src="team_spirit_logo.png" alt="Team Spirit Logo">
+			Team Spirit
+		</h1>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Collections</a>
+			<a href="#">Contacts</a>
+		</nav>
+	</header>
+
+	<!-- Champions -->
+	<div class="champions">
+		<h2>TEAM SPIRIT - CHAMPIONS</h2>
+		<p>December 15th - Team Spirit win the Perfect World Major in Shanghai, defeating FaZe Clan 2-1 in the grand
+			final</p>
+		<a href="#" class="btn">Read More</a>
+	</div>
+
+	<div class="shop">
+		<!-- Dark card -->
+		<div class="shop-card shop-black">
+			<div class="card">
+				<h2>TEAM SPIRIT SHOP</h2>
+				<p>&copy; 2023 Team Spirit TEAM SPIRIT BALKAN DOO 11000, Gospodar Jevremova 38, Belgrade, Serbia 277703</p>
+				<a href="#">Available now</a>
+			</div>
+		</div>
+		<!-- White card -->
+		<div class="shop-card shop-white">
+			<div class="card">
+				<h2>TEAM SPIRIT SHOP</h2>
+				<p>&copy; 2023 Team Spirit TEAM SPIRIT BALKAN DOO 11000, Gospodar Jevremova 38, Belgrade, Serbia 277703</p>
+				<a href="#">Available now</a>
+				<img src="team_spirit_logo.png" alt="Icon" />
+			</div>
+		</div>
+		<!-- Shop -->
+		<div class="shop-collections">
+			<h1 class="shop-collections-title">THE CHAMPIONS COLLECTION IS AVAILABLE NOW</h1>
+			<p class="shop-collections-text">
+				From healthcare and sales enablement platforms to supply chain and agtech software.
+			</p>
+			<a href="#" class="shop-collections-button">AVAILABLE NOW</a>
+		</div>
+	</div>
+
+	<!-- Roster changes -->
+	<div class="roster">
+		<h2>DOTA 2 ROSTER <br> CHANGES</h2>
+		<p>Team Spirit is happy to announce that Magomed Collapse <br> Khalilov and Airat Silent Gaziev are returning to our Dota 2 roster <br> after a vacation.</p>
+		<a href="#" class="btn">MORE</a>
+	</div>
+
+	<!-- Footer -->
+	<footer class ="footer">
+		<p>&copy; 2023 High Alpha. All rights reserved.</p>
+	  </footer>
+
+</body>
+
+</html>
